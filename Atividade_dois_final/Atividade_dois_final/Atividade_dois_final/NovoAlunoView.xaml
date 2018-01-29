@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Atividade_dois_final.NovoAlunoView">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Entry x:Name="txtNome" Placeholder="Nome" Text="{Binding AlunoModel.Nome}" />
+            <Entry x:Name="txtRM" Placeholder="RM" Text="{Binding AlunoModel.RM}" />
+            <Entry x:Name="txtEmail" Placeholder="E-mail" Text="{Binding AlunoModel.Email}" />
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnSalvar" Text="Salvar" BackgroundColor="Black" TextColor="Lavender"
+                        Command="{Binding OnAdicionarAlunoCMD}"
+                        CommandParameter="{Binding AlunoModel}" />
+                <Button x:Name="btnCancelar" Text="Cancelar" Command="{Binding OnSairCMD}" BackgroundColor="Black"  TextColor="Lavender"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

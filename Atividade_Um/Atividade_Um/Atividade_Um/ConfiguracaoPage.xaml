@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Atividade_Um.ConfiguracaoPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="85" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <StackLayout>
+                <TableView>
+                    <TableView.Root>
+                        <TableSection>
+                            <SwitchCell  x:Name="swEmail" Text="Aceita receber Email?" On="True" OnChanged="switchEmail_OnChanged" />
+                        </TableSection>
+                    </TableView.Root>
+                </TableView>
+            </StackLayout>
+
+        <StackLayout Padding="10" Grid.Row="1">
+            <Entry x:Name="txtemail" Text="{Binding LoginEmail}" Placeholder="Informe seu email"/>
+        </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

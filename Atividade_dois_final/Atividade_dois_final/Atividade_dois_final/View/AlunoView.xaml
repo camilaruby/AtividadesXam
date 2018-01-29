@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Atividade_dois_final.View.AlunoView">
+    <ContentPage.ToolbarItems  >
+        <ToolbarItem  Text="Adicionar"  x:Name="btnAddAluno" Command="{Binding OnNovoAlunoCMD}" Order="Primary" Priority="1" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Padding="20" BackgroundColor="Lavender">
+            <Label Text="Alunos Fiap" Font="18" />
+            <ListView x:Name="lstAlunos" ItemsSource="{Binding Alunos}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="5,0,5,0">
+                                   <Label Text="{Binding Nome}" Font="14" />
+                                   <Label Text="{Binding Email}" Font="10" />
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Atividade_Um"
+             x:Class="Atividade_Um.MainPage" BackgroundColor="Honeydew">
+    <ContentPage.Content>
+        <StackLayout Padding="30" Spacing="10">
+                <StackLayout HorizontalOptions="Center">
+                <Button Text="ENVIAR" x:Name="btnEnviar" Clicked="btnEnviar_Clicked" BackgroundColor="Black" TextColor="Honeydew" />
+                <Button Text="Configurar" x:Name="btnConfiguarcao" Clicked="btnConfiguracao_Clicked"  BackgroundColor="Black" TextColor="Honeydew"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
